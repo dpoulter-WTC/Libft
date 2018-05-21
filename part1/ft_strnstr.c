@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 14:18:17 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/17 14:25:13 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/05/21 10:13:03 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/05/21 10:16:11 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strstr(const char *haystack, const char *needle, size_t len)
 	int		k;
 	int		found;
 
-	if(!ft_strlen(needle))
+	if (!ft_strlen(needle))
 		return ((char *)haystack);
 	i = -1;
 	found = 1;
