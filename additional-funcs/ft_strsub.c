@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoulter <daniel@poulter.co.za>            +#+  +:+       +#+        */
+/*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 15:27:36 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/22 15:33:04 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/05/22 15:03:33 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/05/22 15:52:45 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+char * ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if(!s1 || !s2)
-		return (0);
-	return(ft_strncmp(s1, s2, n) ? 0 : 1);
+	
 }
