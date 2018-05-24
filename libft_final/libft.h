@@ -6,7 +6,7 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 11:06:49 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/23 16:00:03 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/05/23 20:27:44 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,3 +74,22 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char const *s, int fd);
 void		ft_putendl_fd(char const *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
+/*Bonus*/
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void		ift_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstadd(t_list **alst, t_list *new);
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+/*additional*/
+int			ft_islower(int c);
+int			ft_isupper(int c);
+char		*ft_strndup(const char *s1, size_t n);
+int			ft_countwords(char const *str, char c);
+# endif
