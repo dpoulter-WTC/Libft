@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 09:07:00 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/24 09:08:38 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/05/24 13:39:32 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/05/24 13:48:15 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*newstr;
-	int		s1len;
-	int		s2len;
-	int		i;
-	int		j;
+	t_list	*new;
+	t_list	*list;
 
-	if (!s1 || !s2)
+	if (!lst)
 		return (NULL);
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	newstr = ft_strnew(s1len + s2len);
-	if (!newstr)
-		return (NULL);
-	i = -1;
-	j = -1;
-	while (++i < s1len)
-		*(newstr + i) = *(s1 + i);
-	while (++j < s2len)
-		*(newstr + i++) = *(s2 + j);
-	return (newstr);
+	list = f(lst);
+	new = list;
+	while (lst->next)
+	{
+		lst = lst->next;
+		if (!(list->next = f(lst)))
+		{
+			free(list->next);
+			return (NULL);
+		}
+		list = list->next;
+	}
+	return (new);
 }

@@ -6,13 +6,13 @@
 /*   By: dpoulter <daniel@poulter.co.za>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:23:01 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/23 15:24:17 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/05/24 09:07:49 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl(char const *s)
+void	ft_putendl(char const *s)
 {
 	ft_putendl_fd(s, 1);
 }

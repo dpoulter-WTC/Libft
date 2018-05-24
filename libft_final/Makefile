@@ -14,6 +14,7 @@ SRC		= ft_memset.c \
 				ft_strncpy.c \
 				ft_strcat.c \
 				ft_strncat.c \
+				ft_strlcat.c \
 				ft_strchr.c \
 				ft_strrchr.c \
 				ft_strstr.c \
@@ -56,6 +57,12 @@ SRC		= ft_memset.c \
 				ft_isupper.c \
 				ft_strndup.c \
 				ft_countwords.c \
+				ft_lstnew.c \
+				ft_lstdelone.c \
+				ft_lstdel.c \
+				ft_lstadd.c \
+				ft_lstiter.c \
+				ft_lstmap.c \
 
 OBJ = $(SRC:.c=.o)
 

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoulter <daniel@poulter.co.za>            +#+  +:+       +#+        */
+/*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 15:27:36 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/24 09:09:08 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/05/24 13:21:48 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/05/24 13:30:09 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	if (!s1 || !s2)
-		return (0);
-	return (ft_strncmp(s1, s2, n) ? 0 : 1);
+	if ((*alst)->next)
+		ft_lstdel(&(*alst)->next, del);
+	ft_lstdelone(&(*alst), del);
 }

@@ -6,7 +6,7 @@
 /*   By: dpoulter <daniel@poulter.co.za>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:34:16 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/23 16:32:51 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/05/24 09:07:32 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int		get_str_len(int n)
 	return (i);
 }
 
-char	* ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*str;
 	int		str_len;

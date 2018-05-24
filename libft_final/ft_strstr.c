@@ -6,7 +6,7 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:18:17 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/23 16:53:53 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/05/24 09:12:33 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int		k;
 	int		found;
 
-	if(!ft_strlen(needle))
+	if (!ft_strlen(needle))
 		return ((char *)haystack);
 	i = -1;
 	found = 0;
