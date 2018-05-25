@@ -6,11 +6,12 @@
 /*   By: dpoulter <daniel@poulter.co.za>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:34:16 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/24 09:07:32 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/05/24 15:34:13 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int		get_str_len(int n)
 {
@@ -24,9 +25,9 @@ static int		get_str_len(int n)
 
 char			*ft_itoa(int n)
 {
-	char	*str;
-	int		str_len;
-	int		ncpy;
+	char			*str;
+	int				str_len;
+	unsigned int	ncpy;
 
 	str_len = get_str_len(n);
 	ncpy = n;
