@@ -6,12 +6,11 @@
 /*   By: dpoulter <daniel@poulter.co.za>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:34:16 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/05/24 15:34:13 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/05/28 12:42:54 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int		get_str_len(int n)
 {
