@@ -8,11 +8,13 @@ SRC		= ft_memset.c \
 				ft_memchr.c \
 				ft_memcmp.c \
 				ft_strlen.c \
+				ft_strndup.c \
 				ft_strdup.c \
 				ft_strcpy.c \
 				ft_strncpy.c \
 				ft_strcat.c \
 				ft_strncat.c \
+				ft_strlcat.c \
 				ft_strchr.c \
 				ft_strrchr.c \
 				ft_strstr.c \
@@ -51,36 +53,35 @@ SRC		= ft_memset.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
+				ft_islower.c \
+				ft_isupper.c \
+				ft_strndup.c \
+				ft_countwords.c \
 				ft_lstnew.c \
 				ft_lstdelone.c \
 				ft_lstdel.c \
 				ft_lstadd.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
-				ft_islower.c \
-				ft_isupper.c \
-				ft_strndup.c \
+
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
+.PHONY : all clean fclean re
 
-$(NAME): $(OBJ)
+all : $(NAME)
+
+$(NAME) :  $(OBJ)
+	@echo "Compiling \033[42m$(NAME)\033[0m..."
+	@gcc $(CFLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
-	@echo "$(NAME) created"
 	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
 
-%.o: %.c
-	@gcc $(FLAG) -c $< -o $@
+clean :
+	@echo "Removing object files ..."
+	@rm -rf $(OBJ)
 
-clean:
-	@rm -f $(OBJ)
-	@echo "OBJ deleted"
+fclean : clean
+	@echo "Removing $(NAME) ..."
+	@rm -rf $(NAME)
 
-fclean: clean
-	@rm -f $(NAME)
-	@echo "$(NAME) deleted"
-
-re: fclean all
-
-.PHONY: all, clean, fclean, re
+re : fclean all
